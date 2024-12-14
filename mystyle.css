@@ -2,7 +2,7 @@ h1, h3 {
     color: navy;
     margin-left: 20px;
   }
-       
+
 .button-container, h3 {
     display: flex;
     justify-content: center;
@@ -11,6 +11,10 @@ h1, h3 {
 
 .form-label {
     width: 60px;
+}
+
+input::placeholder {
+    font-style: italic;
 }
 
 footer {

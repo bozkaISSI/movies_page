@@ -4,9 +4,18 @@ function addMovie() {
     var movieYear = document.getElementById("inputYear").value;
     var movieActors = document.getElementById("inputActors").value;
      
-    if(movieActors == "" || movieTitle == "" || movieYear == "") {
-        alert("Validation error");
-        return; 
+    if(movieTitle == "") {
+        document.getElementById("inputTitle").setAttribute("placeholder", "Title is required");
+    }
+    if(movieYear == "") {
+        document.getElementById("inputYear").setAttribute("placeholder", "Year is required");
+    }
+    if(movieActors == "") {
+        document.getElementById("inputActors").setAttribute("placeholder", "Actors are required");
+    }
+
+    if (movieTitle == "" || movieYear == "" || movieActors == "") {
+        return;
     }
 
     var li = document.createElement("li");
