@@ -15,11 +15,13 @@ Vanilla JavaScript: Application logic and user interaction. You can read more ab
 CSS (optional): You can add styles to improve the appearance of the page.
 
 📂 File structure
+```bash
 /movies_pages
-/movie-list
 │
 ├── index.html
 ├── script.js
 ├── style.css
 └── README.md
+```
+
 
