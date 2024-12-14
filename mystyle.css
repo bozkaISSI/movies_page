@@ -2,7 +2,6 @@ h1, h3 {
     color: navy;
     margin-left: 20px;
   }
-  
 header {
     margin-bottom: 60px;
 }
@@ -19,16 +18,5 @@ header {
 
 input::placeholder {
     font-style: italic;
-}
-
-footer {
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(73, 73, 116);
-    padding: 10px 0;
-    text-align: center;
-    border-top: 1px solid #ccc;
 }
  
