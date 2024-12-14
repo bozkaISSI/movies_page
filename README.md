@@ -16,8 +16,10 @@ CSS (optional): You can add styles to improve the appearance of the page.
 
 📂 File structure
 /movies_pages
+/movie-list
 │
-├── index.html      # The main HTML file with the basic structure of the page.
-├── script.js       # JavaScript file responsible for functionality.
-├── mystyle.css     # CSS file (optional) for visual styles.
-└── README.md       # Project documentation.
+├── index.html
+├── script.js
+├── style.css
+└── README.md
+
