@@ -1,31 +1,33 @@
-
 function addMovie() {
-    var movieTitle = document.getElementById("inputTitle").value;
-    var movieYear = document.getElementById("inputYear").value;
-    var movieActors = document.getElementById("inputActors").value;
-     
-    if(movieTitle == "") {
-        document.getElementById("inputTitle").setAttribute("placeholder", "Title is required");
-    }
-    if(movieYear == "") {
-        document.getElementById("inputYear").setAttribute("placeholder", "Year is required");
-    }
-    if(movieActors == "") {
-        document.getElementById("inputActors").setAttribute("placeholder", "Actors are required");
-    }
+    const inputs = [
+        { id: "inputTitle", placeholder: "Title is required" },
+        { id: "inputYear", placeholder: "Year is required" },
+        { id: "inputActors", placeholder: "Actors are required" },
+    ];
 
-    if (movieTitle == "" || movieYear == "" || movieActors == "") {
-        return;
-    }
+    let isValid = true;
 
-    var li = document.createElement("li");
+    inputs.forEach(input => {
+        const element = document.getElementById(input.id);
+        if (element.value.trim() === "") {
+            element.setAttribute("placeholder", input.placeholder);
+            isValid = false;
+        } else {
+            element.setAttribute("placeholder", ""); 
+        }
+    });
+
+    if (!isValid) return;
+
+    const [movieTitle, movieYear, movieActors] = inputs.map(input => document.getElementById(input.id).value.trim());
+    const li = document.createElement("li");
     li.classList.add("list-group-item");
-    li.innerHTML = "<input type='checkbox' class='form-check-input me-2'> " + movieTitle + ", " + movieYear + ", " + movieActors;
+    li.innerHTML = `<input type='checkbox' class='form-check-input me-2'> ${movieTitle}, ${movieYear}, ${movieActors}`;
     document.getElementById('movieList').appendChild(li);
-    document.getElementById("inputTitle").value = "";
-    document.getElementById("inputYear").value = "";
-    document.getElementById("inputActors").value = "";
+
+    inputs.forEach(input => (document.getElementById(input.id).value = ""));
 }
+
 
 
 function deleteSelected() {
