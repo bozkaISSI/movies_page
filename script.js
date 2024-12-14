@@ -9,11 +9,13 @@ function addMovie() {
 
     inputs.forEach(input => {
         const element = document.getElementById(input.id);
-        if (element.value.trim() === "") {
+        const value = element.value.trim();
+        if (value === "") {
+            element.value = "";
             element.setAttribute("placeholder", input.placeholder);
             isValid = false;
         } else {
-            element.setAttribute("placeholder", ""); 
+            element.setAttribute("placeholder", "");
         }
     });
 

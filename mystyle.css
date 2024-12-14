@@ -2,6 +2,10 @@ h1, h3 {
     color: navy;
     margin-left: 20px;
   }
+  
+header {
+    margin-bottom: 60px;
+}
 
 .button-container, h3 {
     display: flex;
